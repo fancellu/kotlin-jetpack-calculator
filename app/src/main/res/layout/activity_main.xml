@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_colour"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bar_colour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Calculator"
+            app:titleTextColor="@color/white"
+            app:menu="@menu/settings_menu"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+
+        android:id="@+id/textViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/background_colour"
+        android:gravity="center|end"
+        android:textColor="@color/text_colour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        />
+
+    <TextView
+
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:autoSizeMaxTextSize="75sp"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/background_colour"
+        android:gravity="center|end"
+        android:textColor="@color/text_colour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gridLayout"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnAC" android:text="AC" android:textColor="@color/orange_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnDEL" android:text="DEL" android:textColor="@color/orange_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnDivide" android:text="/" android:textColor="@color/orange_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnMulti" android:text="*" android:textColor="@color/orange_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            />
+        <!-- 2nd row -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnSeven" android:text="7" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnEight" android:text="8" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnNine" android:text="9" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnMinus" android:text="-" android:textColor="@color/orange_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            />
+
+        <!-- 3rd row -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnFour" android:text="4" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnFive" android:text="5" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnSix" android:text="6" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnPlus" android:text="+" android:textColor="@color/orange_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            />
+
+        <!-- 4th row -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnOne" android:text="1" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnTwo" android:text="2" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnThree" android:text="3" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnEqual" android:text="=" android:textColor="@color/white"
+            android:textSize="30sp" android:background="@color/orange_colour"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_rowSpan="2"
+            />
+        <!-- 5th row -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnDot" android:text="." android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:height="80dp" android:layout_width="wrap_content"
+            android:id="@+id/btnZero" android:text="0" android:textColor="@color/text_colour"
+            android:textSize="30sp" android:background="@color/background_colour"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="2"
+            />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
